@@ -1,122 +1,284 @@
-// =========================================
-// SETIBGE — JAVASCRIPT
-// =========================================
+/* =========================================================
+   SETIBGE-CE — comportamento compartilhado
+   ========================================================= */
+(function () {
+  'use strict';
 
-// ---- Mobile menu ----
-const hamburger = document.getElementById('hamburger');
-const mainMenu = document.getElementById('mainMenu');
+  /* ---------- Menu mobile ---------- */
+  const toggle = document.querySelector('.menu-toggle');
+  const nav = document.getElementById('nav');
 
-hamburger.addEventListener('click', () => mainMenu.classList.toggle('open'));
+  if (toggle && nav) {
+    toggle.addEventListener('click', () => {
+      const open = toggle.getAttribute('aria-expanded') === 'true';
+      toggle.setAttribute('aria-expanded', String(!open));
+      nav.classList.toggle('open', !open);
+      document.body.style.overflow = !open ? 'hidden' : '';
+    });
 
-// No mobile, o primeiro toque em um item com submenu abre o submenu
-document.querySelectorAll('.has-sub > a').forEach(link => {
-  link.addEventListener('click', e => {
-    if (window.innerWidth <= 900) {
-      const li = link.parentElement;
-      if (!li.classList.contains('open')) {
-        e.preventDefault();
-        li.classList.add('open');
-      }
-    }
-  });
-});
+    nav.querySelectorAll('a').forEach((link) => {
+      link.addEventListener('click', () => {
+        toggle.setAttribute('aria-expanded', 'false');
+        nav.classList.remove('open');
+        document.body.style.overflow = '';
+      });
+    });
+  }
 
-document.querySelectorAll('.main-menu a:not(.has-sub > a)').forEach(link => {
-  link.addEventListener('click', () => mainMenu.classList.remove('open'));
-});
+  /* ---------- Busca do cabeçalho ---------- */
+  const searchToggle = document.querySelector('.search-toggle');
+  const searchBox = document.getElementById('headerSearch');
 
-// ---- Smooth scroll com compensação do header fixo ----
-document.querySelectorAll('a[href^="#"]').forEach(anchor => {
-  anchor.addEventListener('click', function (e) {
-    const href = this.getAttribute('href');
-    if (href === '#' || e.defaultPrevented) return;
-    const target = document.querySelector(href);
-    if (target) {
+  if (searchToggle && searchBox) {
+    searchToggle.addEventListener('click', () => {
+      const open = searchBox.classList.toggle('open');
+      searchToggle.setAttribute('aria-expanded', String(open));
+      if (open) searchBox.querySelector('input').focus();
+    });
+    searchBox.addEventListener('submit', (e) => {
       e.preventDefault();
-      const offset = document.getElementById('header').offsetHeight + 10;
-      const top = target.getBoundingClientRect().top + window.scrollY - offset;
-      window.scrollTo({ top, behavior: 'smooth' });
-    }
-  });
-});
+      const termo = searchBox.querySelector('input').value.trim();
+      showToast(
+        termo
+          ? 'A busca será ligada ao acervo do site na publicação. Termo registrado: ' + termo
+          : 'Digite um termo para buscar.',
+        termo ? 'success' : 'error'
+      );
+    });
+  }
 
-// ---- Abas de serviços ----
-document.querySelectorAll('.tab').forEach(tab => {
-  tab.addEventListener('click', () => {
-    document.querySelectorAll('.tab').forEach(t => t.classList.remove('active'));
-    document.querySelectorAll('.tab-panel').forEach(p => p.classList.remove('active'));
-    tab.classList.add('active');
-    document.getElementById('tab-' + tab.dataset.tab).classList.add('active');
-  });
-});
+  /* ---------- Carrossel ---------- */
+  document.querySelectorAll('[data-carousel]').forEach((carousel) => {
+    const track = carousel.querySelector('.carousel-track');
+    const slides = Array.from(track.children);
+    const dotsWrap = carousel.querySelector('.carousel-dots');
+    let index = 0;
+    let timer = null;
 
-// ---- Chips "Minha Unidade" ----
-document.querySelectorAll('.chip').forEach(chip => {
-  chip.addEventListener('click', () => {
-    document.querySelectorAll('.chip').forEach(c => c.classList.remove('active'));
-    chip.classList.add('active');
-    document.querySelectorAll('.unidade-grid .tag, .unidade-grid .tag-text')
-      .forEach(t => { t.textContent = chip.textContent; });
-  });
-});
+    slides.forEach((_, i) => {
+      const dot = document.createElement('button');
+      dot.type = 'button';
+      dot.setAttribute('aria-label', 'Ir para o destaque ' + (i + 1));
+      dot.addEventListener('click', () => go(i, true));
+      dotsWrap.appendChild(dot);
+    });
+    const dots = Array.from(dotsWrap.children);
 
-// ---- Formulário de associação ----
-const form = document.getElementById('formAssociacao');
-if (form) {
-  form.addEventListener('submit', function (e) {
-    e.preventDefault();
-    const nome = document.getElementById('nome').value.trim();
-    const email = document.getElementById('email').value.trim();
-    const matricula = document.getElementById('matricula').value.trim();
-
-    if (!nome || !email || !matricula) {
-      showToast('Por favor, preencha todos os campos obrigatórios.', 'error');
-      return;
-    }
-    if (!/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email)) {
-      showToast('Por favor, insira um e-mail válido.', 'error');
-      return;
+    function go(i, manual) {
+      index = (i + slides.length) % slides.length;
+      track.style.transform = 'translateX(-' + index * 100 + '%)';
+      slides.forEach((s, n) => s.setAttribute('aria-hidden', String(n !== index)));
+      dots.forEach((d, n) => d.setAttribute('aria-selected', String(n === index)));
+      if (manual) restart();
     }
 
-    const btn = form.querySelector('.btn-form');
-    btn.textContent = 'Enviando...';
-    btn.disabled = true;
+    function restart() {
+      clearInterval(timer);
+      timer = setInterval(() => go(index + 1), 7000);
+    }
+
+    carousel.querySelector('.prev').addEventListener('click', () => go(index - 1, true));
+    carousel.querySelector('.next').addEventListener('click', () => go(index + 1, true));
+    carousel.addEventListener('mouseenter', () => clearInterval(timer));
+    carousel.addEventListener('mouseleave', restart);
+    carousel.addEventListener('focusin', () => clearInterval(timer));
+
+    go(0);
+    restart();
+  });
+
+  /* ---------- Abas ---------- */
+  document.querySelectorAll('[role="tablist"]').forEach((list) => {
+    const tabs = Array.from(list.querySelectorAll('[role="tab"]'));
+
+    function select(tab) {
+      tabs.forEach((t) => {
+        const on = t === tab;
+        t.setAttribute('aria-selected', String(on));
+        t.tabIndex = on ? 0 : -1;
+        document.getElementById(t.getAttribute('aria-controls')).hidden = !on;
+      });
+    }
+
+    tabs.forEach((tab, i) => {
+      tab.addEventListener('click', () => select(tab));
+      tab.addEventListener('keydown', (e) => {
+        let next = null;
+        if (e.key === 'ArrowRight') next = tabs[(i + 1) % tabs.length];
+        if (e.key === 'ArrowLeft') next = tabs[(i - 1 + tabs.length) % tabs.length];
+        if (next) {
+          e.preventDefault();
+          select(next);
+          next.focus();
+        }
+      });
+    });
+  });
+
+  /* ---------- Chips de filtro ---------- */
+  document.querySelectorAll('[data-filter-group]').forEach((group) => {
+    const chips = Array.from(group.querySelectorAll('.chip'));
+    const targets = Array.from(
+      document.querySelectorAll('[data-filter-item="' + group.dataset.filterGroup + '"]')
+    );
+
+    chips.forEach((chip) => {
+      chip.addEventListener('click', () => {
+        chips.forEach((c) => c.setAttribute('aria-pressed', String(c === chip)));
+        const cat = chip.dataset.cat;
+        targets.forEach((item) => {
+          item.hidden = cat !== 'todos' && item.dataset.cat !== cat;
+        });
+      });
+    });
+  });
+
+  /* ---------- FAQ ---------- */
+  document.querySelectorAll('.faq-q').forEach((q) => {
+    q.addEventListener('click', () => {
+      const open = q.getAttribute('aria-expanded') === 'true';
+      q.setAttribute('aria-expanded', String(!open));
+      document.getElementById(q.getAttribute('aria-controls')).hidden = open;
+    });
+  });
+
+  /* ---------- Revelação no scroll ---------- */
+  const revealables = document.querySelectorAll('.reveal');
+  if (revealables.length) {
+    const io = new IntersectionObserver(
+      (entries) => {
+        entries.forEach((entry) => {
+          if (entry.isIntersecting) {
+            entry.target.classList.add('visible');
+            io.unobserve(entry.target);
+          }
+        });
+      },
+      { threshold: 0.12, rootMargin: '0px 0px -60px' }
+    );
+    revealables.forEach((el) => io.observe(el));
+  }
+
+  /* ---------- Tagline palavra a palavra ---------- */
+  const tagline = document.querySelector('[data-tagline]');
+  if (tagline) {
+    const words = tagline.textContent.trim().split(/\s+/);
+    tagline.textContent = '';
+    words.forEach((word, i) => {
+      const span = document.createElement('span');
+      span.className = 'w';
+      span.textContent = word;
+      span.style.transitionDelay = i * 60 + 'ms';
+      tagline.appendChild(span);
+      tagline.appendChild(document.createTextNode(' '));
+    });
+
+    const wio = new IntersectionObserver(
+      (entries) => {
+        entries.forEach((entry) => {
+          if (entry.isIntersecting) {
+            entry.target.classList.add('on');
+            wio.unobserve(entry.target);
+          }
+        });
+      },
+      { threshold: 0.6, rootMargin: '0px 0px -15%' }
+    );
+    tagline.querySelectorAll('.w').forEach((w) => wio.observe(w));
+  }
+
+  /* ---------- Máscara de telefone ---------- */
+  document.querySelectorAll('input[type="tel"]').forEach((input) => {
+    input.addEventListener('input', function () {
+      let v = this.value.replace(/\D/g, '').slice(0, 11);
+      if (v.length > 6) v = '(' + v.slice(0, 2) + ') ' + v.slice(2, 7) + '-' + v.slice(7);
+      else if (v.length > 2) v = '(' + v.slice(0, 2) + ') ' + v.slice(2);
+      else if (v.length > 0) v = '(' + v;
+      this.value = v;
+    });
+  });
+
+  /* ---------- Validação de formulários ---------- */
+  const EMAIL = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+
+  function setError(input, message) {
+    const holder = input.closest('.field');
+    const slot = holder && holder.querySelector('.field-error');
+    input.setAttribute('aria-invalid', message ? 'true' : 'false');
+    if (slot) slot.textContent = message || '';
+  }
+
+  document.querySelectorAll('form[data-validate]').forEach((form) => {
+    const inputs = Array.from(form.querySelectorAll('input, textarea'));
+
+    inputs.forEach((input) => {
+      input.addEventListener('blur', () => validate(input));
+      input.addEventListener('input', () => {
+        if (input.getAttribute('aria-invalid') === 'true') validate(input);
+      });
+    });
+
+    function validate(input) {
+      const value = input.value.trim();
+      if (input.required && !value) {
+        setError(input, 'Campo obrigatório.');
+        return false;
+      }
+      if (input.type === 'email' && value && !EMAIL.test(value)) {
+        setError(input, 'Informe um e-mail válido.');
+        return false;
+      }
+      if (input.type === 'tel' && value && value.replace(/\D/g, '').length < 10) {
+        setError(input, 'Informe o telefone com DDD.');
+        return false;
+      }
+      setError(input, '');
+      return true;
+    }
+
+    form.addEventListener('submit', (e) => {
+      e.preventDefault();
+      const invalid = inputs.map(validate).filter((ok) => !ok).length;
+
+      if (invalid) {
+        showToast('Revise os campos destacados para continuar.', 'error');
+        const first = inputs.find((i) => i.getAttribute('aria-invalid') === 'true');
+        if (first) first.focus();
+        return;
+      }
+
+      const btn = form.querySelector('button[type="submit"]');
+      const label = btn.textContent;
+      btn.disabled = true;
+      btn.textContent = 'Enviando...';
+
+      setTimeout(() => {
+        btn.disabled = false;
+        btn.textContent = label;
+        form.reset();
+        inputs.forEach((i) => setError(i, ''));
+        showToast(form.dataset.success || 'Mensagem enviada. A secretaria responde em até 2 dias úteis.');
+      }, 1200);
+    });
+  });
+
+  /* ---------- Toast ---------- */
+  function showToast(message, type) {
+    const old = document.querySelector('.toast');
+    if (old) old.remove();
+
+    const toast = document.createElement('div');
+    toast.className = 'toast toast-' + (type === 'error' ? 'error' : 'success');
+    toast.setAttribute('role', 'status');
+    toast.textContent = message;
+    document.body.appendChild(toast);
+
+    requestAnimationFrame(() => toast.classList.add('show'));
     setTimeout(() => {
-      showToast('✅ Solicitação enviada! Entraremos em contato em até 2 dias úteis.', 'success');
-      form.reset();
-      btn.textContent = 'Quero me associar';
-      btn.disabled = false;
-    }, 1500);
-  });
-}
+      toast.classList.remove('show');
+      setTimeout(() => toast.remove(), 500);
+    }, 4500);
+  }
 
-// ---- Toast ----
-function showToast(message, type = 'success') {
-  document.querySelector('.toast')?.remove();
-  const toast = document.createElement('div');
-  toast.className = 'toast';
-  toast.textContent = message;
-  toast.style.cssText = `
-    position: fixed; bottom: 24px; right: 24px; z-index: 9999; padding: 14px 22px;
-    border-radius: 6px; font: 500 .95rem 'Roboto', sans-serif; color: #fff; max-width: 360px;
-    box-shadow: 0 8px 28px rgba(0,0,0,.3); transition: opacity .3s;
-    background: ${type === 'success' ? '#00A86B' : '#d62828'};
-  `;
-  document.body.appendChild(toast);
-  setTimeout(() => {
-    toast.style.opacity = '0';
-    setTimeout(() => toast.remove(), 300);
-  }, 4000);
-}
-
-// ---- Máscara de telefone ----
-const telefoneInput = document.getElementById('telefone');
-if (telefoneInput) {
-  telefoneInput.addEventListener('input', function () {
-    let val = this.value.replace(/\D/g, '').slice(0, 11);
-    if (val.length > 6) val = `(${val.slice(0, 2)}) ${val.slice(2, 7)}-${val.slice(7)}`;
-    else if (val.length > 2) val = `(${val.slice(0, 2)}) ${val.slice(2)}`;
-    else if (val.length > 0) val = `(${val}`;
-    this.value = val;
-  });
-}
+  window.showToast = showToast;
+})();

@@ -1,0 +1,186 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Intranet do associado | SETIBGE-CE</title>
+  <meta name="description" content="Área restrita do associado do SETIBGE-CE, em implantação. Atendimento pela secretaria por WhatsApp e e-mail." />
+  <meta property="og:title" content="Intranet do associado | SETIBGE-CE" />
+  <meta property="og:description" content="Área restrita do associado do SETIBGE-CE, em implantação. Atendimento pela secretaria por WhatsApp e e-mail." />
+  <meta property="og:type" content="website" />
+  <meta property="og:locale" content="pt_BR" />
+  <meta property="og:image" content="logo-mark.png" />
+  <meta name="twitter:card" content="summary" />
+  <meta name="theme-color" content="#0B2545" />
+  <link rel="icon" href="logo-mark.png" type="image/png" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700;800&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@phosphor-icons/web@2.1.1/src/regular/style.css" />
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@phosphor-icons/web@2.1.1/src/fill/style.css" />
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <a class="skip-link" href="#main">Ir para o conteúdo</a>
+
+  <header class="header">
+    <div class="container header-inner">
+      <a class="brand" href="index.html" aria-label="SETIBGE-CE, página inicial">
+        <img src="logo-mark.png" alt="" />
+        <span class="brand-name">SETIBGE<span>-CE</span></span>
+      </a>
+
+      <button class="menu-toggle" type="button" aria-expanded="false" aria-controls="nav" aria-label="Abrir menu">
+        <span></span><span></span><span></span>
+      </button>
+
+      <nav class="nav" id="nav" aria-label="Menu principal">
+        <ul class="nav-list">
+          <li><a href="index.html">Home</a></li>
+          <li><a href="associacao.html">A Associação</a></li>
+          <li><a href="saude.html">Saúde</a></li>
+          <li><a href="politica.html">Política &amp; Defesa</a></li>
+          <li><a href="parcerias.html">Parcerias &amp; Serviços</a></li>
+          <li><a href="eventos.html">Eventos &amp; Mural</a></li>
+          <li><a href="noticias.html">Notícias</a></li>
+        </ul>
+        <div class="nav-mobile-actions">
+          <a class="btn btn-outline" href="intranet.html"><i class="ph ph-lock-simple"></i> Intranet / Login</a>
+          <a class="btn btn-primary" href="index.html#filie-se">Filie-se</a>
+        </div>
+      </nav>
+
+      <div class="header-actions">
+        <button class="icon-btn search-toggle" type="button" aria-expanded="false" aria-controls="headerSearch" aria-label="Abrir busca">
+          <i class="ph ph-magnifying-glass"></i>
+        </button>
+        <a class="btn btn-outline btn-sm" href="intranet.html"><i class="ph ph-lock-simple"></i> Intranet / Login</a>
+        <a class="btn btn-primary btn-sm" href="index.html#filie-se">Filie-se</a>
+      </div>
+    </div>
+
+    <div class="header-search" id="headerSearch">
+      <form class="container" role="search">
+        <label class="visually-hidden" for="buscaGlobal">Buscar no site</label>
+        <input id="buscaGlobal" type="search" placeholder="Buscar notícias, manifestos, convênios..." />
+        <button class="btn btn-primary" type="submit">Buscar</button>
+      </form>
+    </div>
+  </header>
+
+  <main id="main">
+
+    <section class="page-head">
+      <div class="container">
+        <h1>Intranet do associado</h1>
+        <p>
+          Área restrita para consulta de documentos, segunda via de boletos e histórico
+          de solicitações feitas à secretaria.
+        </p>
+      </div>
+    </section>
+
+    <section class="section">
+      <div class="container-narrow">
+        <div class="alert alert-blue" style="margin-bottom: var(--s-400)">
+          <h4><i class="ph ph-info"></i> Área em implantação</h4>
+          <p>
+            O acesso restrito será liberado junto com o painel administrativo do sindicato.
+            Enquanto isso, a secretaria atende pelo WhatsApp e pelo e-mail institucional.
+          </p>
+        </div>
+
+        <form class="panel" data-validate data-success="Recebemos seu contato. A secretaria responde em até 2 dias úteis.">
+          <h2 class="section-title" style="font-size: 1.5rem; margin-bottom: var(--s-300)">Acesso do associado</h2>
+          <div class="field">
+            <label for="i-email">E-mail cadastrado</label>
+            <input id="i-email" type="email" required autocomplete="email" placeholder="seu@email.com" />
+            <span class="field-error" aria-live="polite"></span>
+          </div>
+          <div class="field">
+            <label for="i-matricula">Matrícula IBGE</label>
+            <input id="i-matricula" type="text" required placeholder="Somente números" />
+            <span class="field-error" aria-live="polite"></span>
+          </div>
+          <button class="btn btn-primary btn-block" type="submit"><i class="ph ph-lock-simple-open"></i> Entrar</button>
+          <p class="form-note">
+            Ainda não é associado? <a href="index.html#filie-se" style="text-decoration: underline">Faça sua filiação</a>.
+          </p>
+        </form>
+
+        <div class="grid-2" style="margin-top: var(--s-400)">
+          <a class="contact-card" href="https://wa.me/5585999120088">
+            <i class="ph ph-whatsapp-logo"></i>
+            <h3>Atendimento por WhatsApp</h3>
+            <p>Segunda a sexta, das 8h às 17h</p>
+          </a>
+          <a class="contact-card" href="mailto:contato@setibge-ce.org.br">
+            <i class="ph ph-envelope-simple"></i>
+            <h3>E-mail da secretaria</h3>
+            <p>contato@setibge-ce.org.br</p>
+          </a>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <div class="container footer-grid">
+      <div>
+        <div class="brand">
+          <img src="logo-mark.png" alt="" />
+          <span class="brand-name">SETIBGE<span>-CE</span></span>
+        </div>
+        <p class="footer-about">
+          Sindicato Estadual dos Trabalhadores em Fundações Públicas Federais
+          de Geografia e Estatística no Estado do Ceará.
+        </p>
+      </div>
+
+      <div>
+        <h4>Links rápidos</h4>
+        <ul class="footer-list">
+          <li><a href="index.html">Home</a></li>
+          <li><a href="associacao.html">A Associação</a></li>
+          <li><a href="saude.html">Saúde</a></li>
+          <li><a href="politica.html">Política &amp; Defesa</a></li>
+          <li><a href="parcerias.html">Parcerias &amp; Serviços</a></li>
+          <li><a href="eventos.html">Eventos &amp; Mural</a></li>
+          <li><a href="noticias.html">Notícias</a></li>
+        </ul>
+      </div>
+
+      <div>
+        <h4>Fale conosco</h4>
+        <ul class="footer-contact">
+          <li><i class="ph ph-phone"></i><a href="tel:+558532641234">(85) 3264-1234</a></li>
+          <li><i class="ph ph-envelope-simple"></i><a href="mailto:contato@setibge-ce.org.br">contato@setibge-ce.org.br</a></li>
+          <li><i class="ph ph-map-pin"></i><span>Av. Pessoa Anta, 274 — Centro<br />Fortaleza/CE — CEP 60060-160</span></li>
+          <li><i class="ph ph-clock"></i><span>Atendimento presencial<br />Segunda a sexta, das 8h às 17h</span></li>
+        </ul>
+      </div>
+
+      <div>
+        <h4>Siga-nos</h4>
+        <div class="social">
+          <a href="https://instagram.com/setibgece" aria-label="Instagram do SETIBGE-CE"><i class="ph ph-instagram-logo"></i></a>
+          <a href="https://facebook.com/setibgece" aria-label="Facebook do SETIBGE-CE"><i class="ph ph-facebook-logo"></i></a>
+          <a href="https://youtube.com/@setibgece" aria-label="YouTube do SETIBGE-CE"><i class="ph ph-youtube-logo"></i></a>
+          <a href="https://x.com/setibgece" aria-label="Perfil do SETIBGE-CE no X"><i class="ph ph-x-logo"></i></a>
+        </div>
+        <h4 style="margin-top: var(--s-300)">Atendimento</h4>
+        <a class="btn btn-wpp btn-sm" href="https://wa.me/5585999120088"><i class="ph ph-whatsapp-logo"></i> Falar no WhatsApp</a>
+      </div>
+    </div>
+
+    <div class="footer-bottom">
+      <div class="container footer-bottom-inner">
+        <span>© 2026 SETIBGE-CE — Associação dos Trabalhadores do IBGE no Ceará. Todos os direitos reservados.</span>
+        <span><a href="privacidade.html">Política de privacidade</a> · <a href="privacidade.html#termos">Termos de uso</a></span>
+      </div>
+    </div>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>

@@ -1,0 +1,304 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Eventos e Mural | SETIBGE-CE</title>
+  <meta name="description" content="Álbuns dos eventos comemorativos, mural do associado e os marcos da memória dos trabalhadores do IBGE no Ceará." />
+  <meta property="og:title" content="Eventos e Mural | SETIBGE-CE" />
+  <meta property="og:description" content="Álbuns dos eventos comemorativos, mural do associado e os marcos da memória dos trabalhadores do IBGE no Ceará." />
+  <meta property="og:type" content="website" />
+  <meta property="og:locale" content="pt_BR" />
+  <meta property="og:image" content="logo-mark.png" />
+  <meta name="twitter:card" content="summary" />
+  <meta name="theme-color" content="#0B2545" />
+  <link rel="icon" href="logo-mark.png" type="image/png" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700;800&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@phosphor-icons/web@2.1.1/src/regular/style.css" />
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@phosphor-icons/web@2.1.1/src/fill/style.css" />
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <a class="skip-link" href="#main">Ir para o conteúdo</a>
+
+  <header class="header">
+    <div class="container header-inner">
+      <a class="brand" href="index.html" aria-label="SETIBGE-CE, página inicial">
+        <img src="logo-mark.png" alt="" />
+        <span class="brand-name">SETIBGE<span>-CE</span></span>
+      </a>
+
+      <button class="menu-toggle" type="button" aria-expanded="false" aria-controls="nav" aria-label="Abrir menu">
+        <span></span><span></span><span></span>
+      </button>
+
+      <nav class="nav" id="nav" aria-label="Menu principal">
+        <ul class="nav-list">
+          <li><a href="index.html">Home</a></li>
+          <li><a href="associacao.html">A Associação</a></li>
+          <li><a href="saude.html">Saúde</a></li>
+          <li><a href="politica.html">Política &amp; Defesa</a></li>
+          <li><a href="parcerias.html">Parcerias &amp; Serviços</a></li>
+          <li><a href="eventos.html" aria-current="page">Eventos &amp; Mural</a></li>
+          <li><a href="noticias.html">Notícias</a></li>
+        </ul>
+        <div class="nav-mobile-actions">
+          <a class="btn btn-outline" href="intranet.html"><i class="ph ph-lock-simple"></i> Intranet / Login</a>
+          <a class="btn btn-primary" href="index.html#filie-se">Filie-se</a>
+        </div>
+      </nav>
+
+      <div class="header-actions">
+        <button class="icon-btn search-toggle" type="button" aria-expanded="false" aria-controls="headerSearch" aria-label="Abrir busca">
+          <i class="ph ph-magnifying-glass"></i>
+        </button>
+        <a class="btn btn-outline btn-sm" href="intranet.html"><i class="ph ph-lock-simple"></i> Intranet / Login</a>
+        <a class="btn btn-primary btn-sm" href="index.html#filie-se">Filie-se</a>
+      </div>
+    </div>
+
+    <div class="header-search" id="headerSearch">
+      <form class="container" role="search">
+        <label class="visually-hidden" for="buscaGlobal">Buscar no site</label>
+        <input id="buscaGlobal" type="search" placeholder="Buscar notícias, manifestos, convênios..." />
+        <button class="btn btn-primary" type="submit">Buscar</button>
+      </form>
+    </div>
+  </header>
+
+  <main id="main">
+
+    <section class="page-head">
+      <div class="container">
+        <h1>Eventos e mural da comunidade</h1>
+        <p>
+          Registros fotográficos, celebrações de datas especiais e momentos de integração
+          dos servidores do IBGE no Ceará.
+        </p>
+      </div>
+    </section>
+
+    <section class="section">
+      <div class="container">
+        <div class="tabs" role="tablist" aria-label="Eventos e mural">
+          <button class="tab" role="tab" id="tab-eventos" aria-controls="painel-eventos" aria-selected="true" type="button">Eventos comemorativos</button>
+          <button class="tab" role="tab" id="tab-mural" aria-controls="painel-mural" aria-selected="false" tabindex="-1" type="button">Mural do associado e memória</button>
+        </div>
+
+        <!-- Eventos -->
+        <div class="tab-panel" role="tabpanel" id="painel-eventos" aria-labelledby="tab-eventos">
+          <div class="chips" data-filter-group="eventos" role="group" aria-label="Filtrar eventos">
+            <button class="chip" type="button" data-cat="todos" aria-pressed="true">Todos os eventos</button>
+            <button class="chip" type="button" data-cat="mulher" aria-pressed="false">Dia da Mulher</button>
+            <button class="chip" type="button" data-cat="maes" aria-pressed="false">Dia das Mães</button>
+            <button class="chip" type="button" data-cat="junino" aria-pressed="false">São João</button>
+            <button class="chip" type="button" data-cat="natal" aria-pressed="false">Natal</button>
+          </div>
+
+          <div class="grid-3">
+            <article class="event-card reveal" data-filter-item="eventos" data-cat="mulher">
+              <div class="event-cover cover-march">
+                <span class="badge">Março</span>
+                <i class="ph ph-image"></i>
+              </div>
+              <div class="body">
+                <h3>Encontro do Dia da Mulher</h3>
+                <p class="meta"><i class="ph ph-calendar-blank"></i> 8 de março de 2026 · Sede do sindicato</p>
+                <a class="see-more" href="#">Ver álbum de fotos <i class="ph ph-arrow-right"></i></a>
+              </div>
+            </article>
+
+            <article class="event-card reveal" data-filter-item="eventos" data-cat="junino">
+              <div class="event-cover cover-june">
+                <span class="badge">Junho</span>
+                <i class="ph ph-image"></i>
+              </div>
+              <div class="body">
+                <h3>Arraiá dos ibgeanos</h3>
+                <p class="meta"><i class="ph ph-calendar-blank"></i> 21 de junho de 2026 · Sede do sindicato</p>
+                <a class="see-more" href="#">Ver álbum de fotos <i class="ph ph-arrow-right"></i></a>
+              </div>
+            </article>
+
+            <article class="event-card reveal" data-filter-item="eventos" data-cat="natal">
+              <div class="event-cover cover-dec">
+                <span class="badge">Dezembro</span>
+                <i class="ph ph-image"></i>
+              </div>
+              <div class="body">
+                <h3>Confraternização de Natal</h3>
+                <p class="meta"><i class="ph ph-calendar-blank"></i> 13 de dezembro de 2025 · Sede do sindicato</p>
+                <a class="see-more" href="#">Ver álbum de fotos <i class="ph ph-arrow-right"></i></a>
+              </div>
+            </article>
+          </div>
+
+          <div class="alert alert-blue reveal" style="margin-top: var(--s-500)">
+            <h4><i class="ph ph-camera"></i> Esteve presente em nossos eventos?</h4>
+            <p style="margin-bottom: var(--s-200)">
+              Envie suas fotos para a secretaria. As imagens passam por conferência da diretoria antes
+              de entrar no álbum público de cada evento.
+            </p>
+            <a class="btn btn-primary" href="https://wa.me/5585999120088"><i class="ph ph-upload-simple"></i> Enviar foto de evento</a>
+          </div>
+        </div>
+
+        <!-- Mural -->
+        <div class="tab-panel" role="tabpanel" id="painel-mural" aria-labelledby="tab-mural" hidden>
+          <div class="news-layout">
+            <div>
+              <article class="card reveal" style="margin-bottom: var(--s-300)">
+                <span class="badge badge-soft">Homenagem aos aposentados</span>
+                <h3 style="font-size: 1.5rem; margin: var(--s-200) 0 var(--s-100); color: var(--navy-900)">
+                  Quarenta anos de campo: a despedida de Raimundo Nonato
+                </h3>
+                <p style="color: var(--ink-soft); margin-bottom: var(--s-200)">
+                  Agente de pesquisa desde 1986, Raimundo participou de quatro censos demográficos e
+                  percorreu mais de setenta municípios cearenses. A homenagem reuniu colegas de várias
+                  gerações na sede do sindicato.
+                </p>
+                <div class="gallery" style="grid-template-columns: repeat(3, 1fr)">
+                  <figure><div class="ph"><i class="ph ph-image"></i></div></figure>
+                  <figure><div class="ph"><i class="ph ph-image"></i></div></figure>
+                  <figure><div class="ph"><i class="ph ph-image"></i></div></figure>
+                </div>
+                <p class="meta" style="margin-top: var(--s-200)"><i class="ph ph-calendar-blank"></i> 29 de agosto de 2026</p>
+              </article>
+
+              <article class="card reveal" style="margin-bottom: var(--s-300)">
+                <span class="badge badge-soft">Vida na associação</span>
+                <h3 style="font-size: 1.25rem; margin: var(--s-200) 0 var(--s-100); color: var(--navy-900)">
+                  A sala multiuso da sede ganhou espelhos e piso novo
+                </h3>
+                <p style="color: var(--ink-soft)">
+                  A reforma foi aprovada em assembleia e viabilizou as turmas de pilates e ginástica
+                  laboral no mesmo espaço usado para as reuniões de base.
+                </p>
+                <p class="meta" style="margin-top: var(--s-200)"><i class="ph ph-calendar-blank"></i> 12 de agosto de 2026</p>
+              </article>
+
+              <article class="card reveal">
+                <span class="badge badge-soft">Acervo de memória</span>
+                <h3 style="font-size: 1.25rem; margin: var(--s-200) 0 var(--s-100); color: var(--navy-900)">
+                  Encontrado o livro de atas das primeiras assembleias
+                </h3>
+                <p style="color: var(--ink-soft)">
+                  O volume, doado pela família de um dos fundadores, registra as reuniões entre 1989 e
+                  1993 e será digitalizado para consulta dos associados.
+                </p>
+                <p class="meta" style="margin-top: var(--s-200)"><i class="ph ph-calendar-blank"></i> 3 de julho de 2026</p>
+              </article>
+            </div>
+
+            <aside>
+              <div class="card" style="margin-bottom: var(--s-300)">
+                <h3 class="section-title" style="font-size: 1.125rem; margin-bottom: var(--s-300)">
+                  <i class="ph ph-hourglass"></i> Marcos da nossa memória
+                </h3>
+                <div class="timeline">
+                  <div class="timeline-item">
+                    <div class="timeline-body">
+                      <span class="timeline-tag">1947</span>
+                      <div>
+                        <h4>O IBGE chega ao Ceará</h4>
+                        <p>Instalação da inspetoria regional em Fortaleza, embrião da atual superintendência.</p>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="timeline-item">
+                    <div class="timeline-body">
+                      <span class="timeline-tag">1988</span>
+                      <div>
+                        <h4>A organização da base</h4>
+                        <p>As primeiras reuniões de trabalhadores que resultariam na fundação do sindicato no ano seguinte.</p>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="timeline-item">
+                    <div class="timeline-body">
+                      <span class="timeline-tag">2012</span>
+                      <div>
+                        <h4>Sede própria</h4>
+                        <p>O sindicato passa a ocupar a sede atual, no Centro de Fortaleza, com espaço para assembleias.</p>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+              <div class="alert alert-blue">
+                <h4><i class="ph ph-paper-plane-tilt"></i> Tem uma história para contar?</h4>
+                <p style="margin-bottom: var(--s-200)">
+                  Fotos antigas, documentos e relatos ajudam a montar a memória da categoria no Ceará.
+                </p>
+                <a class="btn btn-primary btn-block" href="https://wa.me/5585999120088"><i class="ph ph-upload-simple"></i> Enviar foto ou história</a>
+              </div>
+            </aside>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <div class="container footer-grid">
+      <div>
+        <div class="brand">
+          <img src="logo-mark.png" alt="" />
+          <span class="brand-name">SETIBGE<span>-CE</span></span>
+        </div>
+        <p class="footer-about">
+          Sindicato Estadual dos Trabalhadores em Fundações Públicas Federais
+          de Geografia e Estatística no Estado do Ceará.
+        </p>
+      </div>
+
+      <div>
+        <h4>Links rápidos</h4>
+        <ul class="footer-list">
+          <li><a href="index.html">Home</a></li>
+          <li><a href="associacao.html">A Associação</a></li>
+          <li><a href="saude.html">Saúde</a></li>
+          <li><a href="politica.html">Política &amp; Defesa</a></li>
+          <li><a href="parcerias.html">Parcerias &amp; Serviços</a></li>
+          <li><a href="eventos.html">Eventos &amp; Mural</a></li>
+          <li><a href="noticias.html">Notícias</a></li>
+        </ul>
+      </div>
+
+      <div>
+        <h4>Fale conosco</h4>
+        <ul class="footer-contact">
+          <li><i class="ph ph-phone"></i><a href="tel:+558532641234">(85) 3264-1234</a></li>
+          <li><i class="ph ph-envelope-simple"></i><a href="mailto:contato@setibge-ce.org.br">contato@setibge-ce.org.br</a></li>
+          <li><i class="ph ph-map-pin"></i><span>Av. Pessoa Anta, 274 — Centro<br />Fortaleza/CE — CEP 60060-160</span></li>
+          <li><i class="ph ph-clock"></i><span>Atendimento presencial<br />Segunda a sexta, das 8h às 17h</span></li>
+        </ul>
+      </div>
+
+      <div>
+        <h4>Siga-nos</h4>
+        <div class="social">
+          <a href="https://instagram.com/setibgece" aria-label="Instagram do SETIBGE-CE"><i class="ph ph-instagram-logo"></i></a>
+          <a href="https://facebook.com/setibgece" aria-label="Facebook do SETIBGE-CE"><i class="ph ph-facebook-logo"></i></a>
+          <a href="https://youtube.com/@setibgece" aria-label="YouTube do SETIBGE-CE"><i class="ph ph-youtube-logo"></i></a>
+          <a href="https://x.com/setibgece" aria-label="Perfil do SETIBGE-CE no X"><i class="ph ph-x-logo"></i></a>
+        </div>
+        <h4 style="margin-top: var(--s-300)">Atendimento</h4>
+        <a class="btn btn-wpp btn-sm" href="https://wa.me/5585999120088"><i class="ph ph-whatsapp-logo"></i> Falar no WhatsApp</a>
+      </div>
+    </div>
+
+    <div class="footer-bottom">
+      <div class="container footer-bottom-inner">
+        <span>© 2026 SETIBGE-CE — Associação dos Trabalhadores do IBGE no Ceará. Todos os direitos reservados.</span>
+        <span><a href="privacidade.html">Política de privacidade</a> · <a href="privacidade.html#termos">Termos de uso</a></span>
+      </div>
+    </div>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>

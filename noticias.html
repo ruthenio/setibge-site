@@ -1,0 +1,222 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Notícias | SETIBGE-CE</title>
+  <meta name="description" content="Notícias e informativos do SETIBGE-CE sobre carreira, saúde, mobilização e atendimento aos trabalhadores do IBGE no Ceará." />
+  <meta property="og:title" content="Notícias | SETIBGE-CE" />
+  <meta property="og:description" content="Notícias e informativos do SETIBGE-CE sobre carreira, saúde, mobilização e atendimento aos trabalhadores do IBGE no Ceará." />
+  <meta property="og:type" content="website" />
+  <meta property="og:locale" content="pt_BR" />
+  <meta property="og:image" content="logo-mark.png" />
+  <meta name="twitter:card" content="summary" />
+  <meta name="theme-color" content="#0B2545" />
+  <link rel="icon" href="logo-mark.png" type="image/png" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700;800&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@phosphor-icons/web@2.1.1/src/regular/style.css" />
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@phosphor-icons/web@2.1.1/src/fill/style.css" />
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <a class="skip-link" href="#main">Ir para o conteúdo</a>
+
+  <header class="header">
+    <div class="container header-inner">
+      <a class="brand" href="index.html" aria-label="SETIBGE-CE, página inicial">
+        <img src="logo-mark.png" alt="" />
+        <span class="brand-name">SETIBGE<span>-CE</span></span>
+      </a>
+
+      <button class="menu-toggle" type="button" aria-expanded="false" aria-controls="nav" aria-label="Abrir menu">
+        <span></span><span></span><span></span>
+      </button>
+
+      <nav class="nav" id="nav" aria-label="Menu principal">
+        <ul class="nav-list">
+          <li><a href="index.html">Home</a></li>
+          <li><a href="associacao.html">A Associação</a></li>
+          <li><a href="saude.html">Saúde</a></li>
+          <li><a href="politica.html">Política &amp; Defesa</a></li>
+          <li><a href="parcerias.html">Parcerias &amp; Serviços</a></li>
+          <li><a href="eventos.html">Eventos &amp; Mural</a></li>
+          <li><a href="noticias.html" aria-current="page">Notícias</a></li>
+        </ul>
+        <div class="nav-mobile-actions">
+          <a class="btn btn-outline" href="intranet.html"><i class="ph ph-lock-simple"></i> Intranet / Login</a>
+          <a class="btn btn-primary" href="index.html#filie-se">Filie-se</a>
+        </div>
+      </nav>
+
+      <div class="header-actions">
+        <button class="icon-btn search-toggle" type="button" aria-expanded="false" aria-controls="headerSearch" aria-label="Abrir busca">
+          <i class="ph ph-magnifying-glass"></i>
+        </button>
+        <a class="btn btn-outline btn-sm" href="intranet.html"><i class="ph ph-lock-simple"></i> Intranet / Login</a>
+        <a class="btn btn-primary btn-sm" href="index.html#filie-se">Filie-se</a>
+      </div>
+    </div>
+
+    <div class="header-search" id="headerSearch">
+      <form class="container" role="search">
+        <label class="visually-hidden" for="buscaGlobal">Buscar no site</label>
+        <input id="buscaGlobal" type="search" placeholder="Buscar notícias, manifestos, convênios..." />
+        <button class="btn btn-primary" type="submit">Buscar</button>
+      </form>
+    </div>
+  </header>
+
+  <main id="main">
+
+    <section class="page-head">
+      <div class="container">
+        <h1>Notícias</h1>
+        <p>
+          Negociações, direitos, carreira e a atuação do SETIBGE-CE, publicados pela
+          diretoria de imprensa do sindicato.
+        </p>
+      </div>
+    </section>
+
+    <section class="section">
+      <div class="container">
+        <div class="chips" data-filter-group="noticias" role="group" aria-label="Filtrar notícias por categoria">
+          <button class="chip" type="button" data-cat="todos" aria-pressed="true">Todas</button>
+          <button class="chip" type="button" data-cat="carreira" aria-pressed="false">Carreira</button>
+          <button class="chip" type="button" data-cat="saude" aria-pressed="false">Saúde</button>
+          <button class="chip" type="button" data-cat="mobilizacao" aria-pressed="false">Mobilização</button>
+          <button class="chip" type="button" data-cat="sede" aria-pressed="false">Sede e atendimento</button>
+        </div>
+
+        <a class="news-feature reveal" id="reestruturacao" href="#" data-filter-item="noticias" data-cat="carreira" style="margin-bottom: var(--s-500)">
+          <div class="media">
+            <span class="badge badge-sede">Destaque principal</span>
+            <img src="hero.png" alt="Servidores do IBGE reunidos durante encontro da categoria" />
+          </div>
+          <div class="body">
+            <h3>Reestruturação das carreiras: entenda o impacto para o IBGE no Ceará</h3>
+            <p>
+              A proposta em discussão altera a tabela de vencimentos e o desenho das progressões.
+              Reunimos ponto a ponto o que muda para quem está na ativa e para quem já se aposentou,
+              com a posição defendida pelo sindicato em cada item.
+            </p>
+            <span class="meta"><i class="ph ph-calendar-blank"></i> Publicado em 10 de setembro de 2026</span>
+          </div>
+        </a>
+
+        <div class="news-grid">
+          <article class="news-card reveal" data-filter-item="noticias" data-cat="saude">
+            <div class="body">
+              <span class="badge badge-soft">Saúde</span>
+              <h3>Reajuste das tabelas de saúde entra em vigor em outubro</h3>
+              <p>O percentual e a nova tabela de coparticipação já estão disponíveis para consulta na área de saúde.</p>
+              <span class="meta"><i class="ph ph-calendar-blank"></i> 8 de setembro de 2026</span>
+            </div>
+          </article>
+          <article class="news-card reveal" data-filter-item="noticias" data-cat="sede">
+            <div class="body">
+              <span class="badge badge-soft">Sede e atendimento</span>
+              <h3>Sede passa a atender das 8h às 17h, sem fechar no almoço</h3>
+              <p>A mudança atende a pedido dos associados que trabalham em escala e das equipes do interior.</p>
+              <span class="meta"><i class="ph ph-calendar-blank"></i> 2 de setembro de 2026</span>
+            </div>
+          </article>
+          <article class="news-card reveal" data-filter-item="noticias" data-cat="mobilizacao">
+            <div class="body">
+              <span class="badge badge-soft">Mobilização</span>
+              <h3>Caravana cearense entrega pauta unificada em Brasília</h3>
+              <p>Delegação de 18 associados participou da entrega do documento ao Ministério do Planejamento.</p>
+              <span class="meta"><i class="ph ph-calendar-blank"></i> 23 de agosto de 2026</span>
+            </div>
+          </article>
+          <article class="news-card reveal" data-filter-item="noticias" data-cat="carreira">
+            <div class="body">
+              <span class="badge badge-soft">Carreira</span>
+              <h3>Progressão funcional: prazo para recurso vai até 30 de setembro</h3>
+              <p>Quem discorda da pontuação da avaliação tem 15 dias para protocolar o pedido de revisão.</p>
+              <span class="meta"><i class="ph ph-calendar-blank"></i> 15 de agosto de 2026</span>
+            </div>
+          </article>
+          <article class="news-card reveal" data-filter-item="noticias" data-cat="mobilizacao">
+            <div class="body">
+              <span class="badge badge-soft">Mobilização</span>
+              <h3>Ato na superintendência cobra recomposição das equipes de coleta</h3>
+              <p>Concentração reuniu servidores da capital e das agências de Sobral e Juazeiro do Norte.</p>
+              <span class="meta"><i class="ph ph-calendar-blank"></i> 18 de julho de 2026</span>
+            </div>
+          </article>
+          <article class="news-card reveal" data-filter-item="noticias" data-cat="sede">
+            <div class="body">
+              <span class="badge badge-soft">Sede e atendimento</span>
+              <h3>Sala multiuso reformada abriga as novas turmas de pilates</h3>
+              <p>A obra aprovada em assembleia liberou o espaço para atividades físicas e reuniões de base.</p>
+              <span class="meta"><i class="ph ph-calendar-blank"></i> 12 de julho de 2026</span>
+            </div>
+          </article>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <div class="container footer-grid">
+      <div>
+        <div class="brand">
+          <img src="logo-mark.png" alt="" />
+          <span class="brand-name">SETIBGE<span>-CE</span></span>
+        </div>
+        <p class="footer-about">
+          Sindicato Estadual dos Trabalhadores em Fundações Públicas Federais
+          de Geografia e Estatística no Estado do Ceará.
+        </p>
+      </div>
+
+      <div>
+        <h4>Links rápidos</h4>
+        <ul class="footer-list">
+          <li><a href="index.html">Home</a></li>
+          <li><a href="associacao.html">A Associação</a></li>
+          <li><a href="saude.html">Saúde</a></li>
+          <li><a href="politica.html">Política &amp; Defesa</a></li>
+          <li><a href="parcerias.html">Parcerias &amp; Serviços</a></li>
+          <li><a href="eventos.html">Eventos &amp; Mural</a></li>
+          <li><a href="noticias.html">Notícias</a></li>
+        </ul>
+      </div>
+
+      <div>
+        <h4>Fale conosco</h4>
+        <ul class="footer-contact">
+          <li><i class="ph ph-phone"></i><a href="tel:+558532641234">(85) 3264-1234</a></li>
+          <li><i class="ph ph-envelope-simple"></i><a href="mailto:contato@setibge-ce.org.br">contato@setibge-ce.org.br</a></li>
+          <li><i class="ph ph-map-pin"></i><span>Av. Pessoa Anta, 274 — Centro<br />Fortaleza/CE — CEP 60060-160</span></li>
+          <li><i class="ph ph-clock"></i><span>Atendimento presencial<br />Segunda a sexta, das 8h às 17h</span></li>
+        </ul>
+      </div>
+
+      <div>
+        <h4>Siga-nos</h4>
+        <div class="social">
+          <a href="https://instagram.com/setibgece" aria-label="Instagram do SETIBGE-CE"><i class="ph ph-instagram-logo"></i></a>
+          <a href="https://facebook.com/setibgece" aria-label="Facebook do SETIBGE-CE"><i class="ph ph-facebook-logo"></i></a>
+          <a href="https://youtube.com/@setibgece" aria-label="YouTube do SETIBGE-CE"><i class="ph ph-youtube-logo"></i></a>
+          <a href="https://x.com/setibgece" aria-label="Perfil do SETIBGE-CE no X"><i class="ph ph-x-logo"></i></a>
+        </div>
+        <h4 style="margin-top: var(--s-300)">Atendimento</h4>
+        <a class="btn btn-wpp btn-sm" href="https://wa.me/5585999120088"><i class="ph ph-whatsapp-logo"></i> Falar no WhatsApp</a>
+      </div>
+    </div>
+
+    <div class="footer-bottom">
+      <div class="container footer-bottom-inner">
+        <span>© 2026 SETIBGE-CE — Associação dos Trabalhadores do IBGE no Ceará. Todos os direitos reservados.</span>
+        <span><a href="privacidade.html">Política de privacidade</a> · <a href="privacidade.html#termos">Termos de uso</a></span>
+      </div>
+    </div>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>

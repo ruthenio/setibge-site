@@ -1,0 +1,376 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Política e Defesa | SETIBGE-CE</title>
+  <meta name="description" content="Cadernos, artigos, manifestos, deliberações de assembleia e registros em vídeo da atuação política do SETIBGE-CE em defesa do IBGE." />
+  <meta property="og:title" content="Política e Defesa | SETIBGE-CE" />
+  <meta property="og:description" content="Cadernos, artigos, manifestos, deliberações de assembleia e registros em vídeo da atuação política do SETIBGE-CE em defesa do IBGE." />
+  <meta property="og:type" content="website" />
+  <meta property="og:locale" content="pt_BR" />
+  <meta property="og:image" content="logo-mark.png" />
+  <meta name="twitter:card" content="summary" />
+  <meta name="theme-color" content="#0B2545" />
+  <link rel="icon" href="logo-mark.png" type="image/png" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700;800&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@phosphor-icons/web@2.1.1/src/regular/style.css" />
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@phosphor-icons/web@2.1.1/src/fill/style.css" />
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <a class="skip-link" href="#main">Ir para o conteúdo</a>
+
+  <header class="header">
+    <div class="container header-inner">
+      <a class="brand" href="index.html" aria-label="SETIBGE-CE, página inicial">
+        <img src="logo-mark.png" alt="" />
+        <span class="brand-name">SETIBGE<span>-CE</span></span>
+      </a>
+
+      <button class="menu-toggle" type="button" aria-expanded="false" aria-controls="nav" aria-label="Abrir menu">
+        <span></span><span></span><span></span>
+      </button>
+
+      <nav class="nav" id="nav" aria-label="Menu principal">
+        <ul class="nav-list">
+          <li><a href="index.html">Home</a></li>
+          <li><a href="associacao.html">A Associação</a></li>
+          <li><a href="saude.html">Saúde</a></li>
+          <li><a href="politica.html" aria-current="page">Política &amp; Defesa</a></li>
+          <li><a href="parcerias.html">Parcerias &amp; Serviços</a></li>
+          <li><a href="eventos.html">Eventos &amp; Mural</a></li>
+          <li><a href="noticias.html">Notícias</a></li>
+        </ul>
+        <div class="nav-mobile-actions">
+          <a class="btn btn-outline" href="intranet.html"><i class="ph ph-lock-simple"></i> Intranet / Login</a>
+          <a class="btn btn-primary" href="index.html#filie-se">Filie-se</a>
+        </div>
+      </nav>
+
+      <div class="header-actions">
+        <button class="icon-btn search-toggle" type="button" aria-expanded="false" aria-controls="headerSearch" aria-label="Abrir busca">
+          <i class="ph ph-magnifying-glass"></i>
+        </button>
+        <a class="btn btn-outline btn-sm" href="intranet.html"><i class="ph ph-lock-simple"></i> Intranet / Login</a>
+        <a class="btn btn-primary btn-sm" href="index.html#filie-se">Filie-se</a>
+      </div>
+    </div>
+
+    <div class="header-search" id="headerSearch">
+      <form class="container" role="search">
+        <label class="visually-hidden" for="buscaGlobal">Buscar no site</label>
+        <input id="buscaGlobal" type="search" placeholder="Buscar notícias, manifestos, convênios..." />
+        <button class="btn btn-primary" type="submit">Buscar</button>
+      </form>
+    </div>
+  </header>
+
+  <main id="main">
+
+    <section class="page-head">
+      <div class="container">
+        <h1>Central de Formação Política</h1>
+        <p>
+          Documentos oficiais, cartas abertas, manifestos de mobilização e o posicionamento
+          do sindicato na defesa do IBGE e do servidor público.
+        </p>
+        <form class="page-search" role="search">
+          <label class="visually-hidden" for="buscaAcervo">Buscar no acervo</label>
+          <input id="buscaAcervo" type="search" placeholder="Buscar por manifesto, ato ou documento oficial" />
+          <button class="btn btn-primary" type="submit"><i class="ph ph-magnifying-glass"></i></button>
+        </form>
+      </div>
+    </section>
+
+    <section class="section">
+      <div class="container">
+        <div class="tabs" role="tablist" aria-label="Acervo de formação política">
+          <button class="tab" role="tab" id="tab-cadernos" aria-controls="painel-cadernos" aria-selected="true" type="button">Cadernos e artigos</button>
+          <button class="tab" role="tab" id="tab-manifestos" aria-controls="painel-manifestos" aria-selected="false" tabindex="-1" type="button">Voz da Associação</button>
+          <button class="tab" role="tab" id="tab-multimidia" aria-controls="painel-multimidia" aria-selected="false" tabindex="-1" type="button">Multimídia e eventos</button>
+        </div>
+
+        <!-- Cadernos e artigos -->
+        <div class="tab-panel" role="tabpanel" id="painel-cadernos" aria-labelledby="tab-cadernos">
+          <div class="chips" data-filter-group="artigos" role="group" aria-label="Filtrar artigos por categoria">
+            <button class="chip" type="button" data-cat="todos" aria-pressed="true">Todos</button>
+            <button class="chip" type="button" data-cat="ibge" aria-pressed="false">Situacional IBGE</button>
+            <button class="chip" type="button" data-cat="geo" aria-pressed="false">Geopolítica e sociedade</button>
+            <button class="chip" type="button" data-cat="conjuntura" aria-pressed="false">Conjuntura nacional</button>
+          </div>
+
+          <article class="article-feature reveal" data-filter-item="artigos" data-cat="ibge" style="margin-bottom: var(--s-400)">
+            <span class="badge badge-amber">Estudo especial</span>
+            <h3 style="margin-top: var(--s-200)">O orçamento do IBGE e o custo real de uma estatística pública confiável</h3>
+            <div class="article-meta">
+              <span><i class="ph ph-calendar-blank"></i> 4 de setembro de 2026</span>
+              <span><i class="ph ph-clock"></i> Leitura: 8 min</span>
+              <span><i class="ph ph-user"></i> Comissão de Formação Política</span>
+            </div>
+            <p class="lead">
+              Um levantamento sobre o que a redução orçamentária dos últimos anos significou na prática
+              para a coleta de dados no Ceará: postos fechados, equipes reduzidas e o efeito disso na
+              qualidade das pesquisas que orientam políticas públicas no estado.
+            </p>
+            <div class="article-actions">
+              <a class="btn btn-primary" href="#">Ler artigo completo <i class="ph ph-arrow-right"></i></a>
+              <a class="btn btn-outline" href="#"><i class="ph ph-download-simple"></i> Baixar PDF</a>
+              <a class="btn btn-outline" href="#"><i class="ph ph-share-network"></i> Compartilhar</a>
+            </div>
+          </article>
+
+          <div class="grid-3">
+            <article class="news-card reveal" data-filter-item="artigos" data-cat="geo">
+              <div class="body">
+                <span class="badge badge-soft">Geopolítica e sociedade</span>
+                <h3>Quem conta a população decide o orçamento: censo e federalismo</h3>
+                <p>Como os dados censitários definem repasses do fundo de participação para os municípios cearenses.</p>
+                <span class="meta"><i class="ph ph-clock"></i> Leitura: 6 min · 22 de agosto de 2026</span>
+              </div>
+            </article>
+            <article class="news-card reveal" data-filter-item="artigos" data-cat="conjuntura">
+              <div class="body">
+                <span class="badge badge-soft">Conjuntura nacional</span>
+                <h3>Concurso público e reposição de quadros: o que está em jogo em 2027</h3>
+                <p>Análise do quadro de pessoal do IBGE diante da curva de aposentadorias previstas.</p>
+                <span class="meta"><i class="ph ph-clock"></i> Leitura: 5 min · 14 de agosto de 2026</span>
+              </div>
+            </article>
+            <article class="news-card reveal" data-filter-item="artigos" data-cat="ibge">
+              <div class="body">
+                <span class="badge badge-soft">Situacional IBGE</span>
+                <h3>Trabalho de campo no semiárido: condições, riscos e o que cobramos</h3>
+                <p>Relato das equipes de coleta no interior do Ceará e as demandas levadas à superintendência.</p>
+                <span class="meta"><i class="ph ph-clock"></i> Leitura: 7 min · 30 de julho de 2026</span>
+              </div>
+            </article>
+          </div>
+
+          <div class="quote-box reveal" style="margin-top: var(--s-500)">
+            <i class="ph-fill ph-pen-nib"></i>
+            <div>
+              <h3>Espaço colaborativo</h3>
+              <p style="margin-bottom: var(--s-200)">
+                O acervo é aberto à categoria. Associados podem enviar artigos, resenhas e sugestões de
+                pauta para a Comissão de Formação Política, que avalia e publica os textos selecionados.
+              </p>
+              <a class="btn btn-primary" href="https://wa.me/5585999120088"><i class="ph ph-paper-plane-tilt"></i> Submeter artigo ou sugestão de pauta</a>
+            </div>
+          </div>
+        </div>
+
+        <!-- Manifestos -->
+        <div class="tab-panel" role="tabpanel" id="painel-manifestos" aria-labelledby="tab-manifestos" hidden>
+          <div id="manifestos" class="chips" data-filter-group="manifestos" role="group" aria-label="Filtrar documentos por tipo">
+            <button class="chip" type="button" data-cat="todos" aria-pressed="true">Todos</button>
+            <button class="chip" type="button" data-cat="manifesto" aria-pressed="false">Manifestos e cartas abertas</button>
+            <button class="chip" type="button" data-cat="assembleia" aria-pressed="false">Deliberações de assembleia</button>
+            <button class="chip" type="button" data-cat="dossie" aria-pressed="false">Dossiês de luta</button>
+          </div>
+
+          <article class="article-feature reveal" data-filter-item="manifestos" data-cat="manifesto" style="margin-bottom: var(--s-400)">
+            <h3>Manifesto em defesa do caráter público e autônomo da produção estatística do IBGE</h3>
+            <div class="article-meta">
+              <span class="badge badge-amber"><i class="ph-fill ph-seal-check"></i> Aprovado em assembleia geral</span>
+              <span><i class="ph ph-calendar-blank"></i> 22 de maio de 2026</span>
+            </div>
+            <blockquote class="pull">
+              Reafirmamos o compromisso inegociável da comunidade ibgeana com a produção de dados
+              imparciais, transparentes e a serviço de toda a sociedade brasileira, repelindo qualquer
+              tentativa de precarização ou desvio institucional.
+            </blockquote>
+            <div class="article-actions">
+              <a class="btn btn-navy" href="#"><i class="ph ph-download-simple"></i> Baixar manifesto em PDF</a>
+              <a class="btn btn-wpp" href="https://wa.me/5585999120088"><i class="ph ph-whatsapp-logo"></i> Compartilhar no WhatsApp</a>
+            </div>
+          </article>
+
+          <div class="grid-2">
+            <div class="card" data-filter-item="manifestos" data-cat="manifesto">
+              <h3 class="section-title" style="font-size: 1.25rem; margin-bottom: var(--s-300)">Cartas abertas e notas oficiais</h3>
+              <ul class="doc-list">
+                <li>
+                  <span class="badge badge-neutral">Nota oficial</span>
+                  <h4>Sobre a suspensão de contratos temporários na coleta do Ceará</h4>
+                  <p>O sindicato cobra da superintendência o cronograma de recomposição das equipes e o pagamento das diárias em atraso.</p>
+                  <a class="doc-link" href="#"><i class="ph ph-file-pdf"></i> Baixar nota em PDF</a>
+                </li>
+                <li>
+                  <span class="badge badge-neutral">Carta aberta</span>
+                  <h4>Carta aberta à sociedade cearense em defesa da pesquisa pública</h4>
+                  <p>Documento entregue à bancada estadual durante a caravana a Brasília, com assinatura de entidades parceiras.</p>
+                  <a class="doc-link" href="#"><i class="ph ph-file-pdf"></i> Baixar carta em PDF</a>
+                </li>
+                <li>
+                  <span class="badge badge-neutral">Dossiê</span>
+                  <h4>Dossiê das condições de trabalho nas agências do interior</h4>
+                  <p>Levantamento fotográfico e técnico das instalações em Sobral, Juazeiro do Norte e Iguatu.</p>
+                  <a class="doc-link" href="#"><i class="ph ph-file-pdf"></i> Baixar dossiê em PDF</a>
+                </li>
+              </ul>
+            </div>
+
+            <div class="card" data-filter-item="manifestos" data-cat="assembleia">
+              <h3 class="section-title" style="font-size: 1.25rem; margin-bottom: var(--s-300)">Linha do tempo de atos e atuações</h3>
+              <div class="timeline">
+                <div class="timeline-item">
+                  <div class="timeline-body">
+                    <span class="timeline-tag">23 ago</span>
+                    <div>
+                      <h4>Caravana a Brasília</h4>
+                      <p>Delegação cearense participa da entrega da pauta unificada ao Ministério do Planejamento.</p>
+                    </div>
+                  </div>
+                </div>
+                <div class="timeline-item">
+                  <div class="timeline-body">
+                    <span class="timeline-tag">18 jul</span>
+                    <div>
+                      <h4>Ato presencial na superintendência</h4>
+                      <p>Concentração no pátio da superintendência em defesa da recomposição das equipes de coleta.</p>
+                    </div>
+                  </div>
+                </div>
+                <div class="timeline-item">
+                  <div class="timeline-body">
+                    <span class="timeline-tag">26 jun</span>
+                    <div>
+                      <h4>Frente em defesa do serviço público</h4>
+                      <p>SETIBGE-CE integra a frente estadual junto a outras entidades de servidores federais.</p>
+                    </div>
+                  </div>
+                </div>
+                <div class="timeline-item">
+                  <div class="timeline-body">
+                    <span class="timeline-tag">22 mai</span>
+                    <div>
+                      <h4>Assembleia geral de aprovação do manifesto</h4>
+                      <p>Texto aprovado por unanimidade com 148 associados presentes, entre a sede e o formato on-line.</p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Multimídia -->
+        <div class="tab-panel" role="tabpanel" id="painel-multimidia" aria-labelledby="tab-multimidia" hidden>
+          <div class="news-layout" style="margin-bottom: var(--s-500)">
+            <div>
+              <div class="media-player">
+                <i class="ph-fill ph-play-circle"></i>
+              </div>
+              <h3 style="font-size: 1.5rem; margin: var(--s-200) 0 var(--s-75); color: var(--navy-900)">
+                Palestra: o papel das estatísticas públicas na formulação de políticas no Ceará
+              </h3>
+              <p style="color: var(--ink-soft)">
+                Encontro estadual de formação política, gravado na sede do sindicato com participação de
+                pesquisadores da Universidade Federal do Ceará.
+              </p>
+              <div class="article-actions">
+                <a class="btn btn-outline" href="#"><i class="ph ph-download-simple"></i> Baixar apresentação em PDF</a>
+              </div>
+            </div>
+
+            <aside class="card">
+              <h3 class="section-title" style="font-size: 1.125rem; margin-bottom: var(--s-200)">Outras palestras e debates</h3>
+              <div class="media-item">
+                <div class="media-thumb"><i class="ph-fill ph-play"></i></div>
+                <div>
+                  <span class="badge badge-neutral">Vídeo</span>
+                  <h4>Debate sobre o plano de carreiras, na íntegra</h4>
+                </div>
+              </div>
+              <div class="media-item">
+                <div class="media-thumb"><i class="ph-fill ph-play"></i></div>
+                <div>
+                  <span class="badge badge-neutral">Vídeo</span>
+                  <h4>Roda de conversa: saúde mental no trabalho de campo</h4>
+                </div>
+              </div>
+              <div class="media-item">
+                <div class="media-thumb"><i class="ph-fill ph-waveform"></i></div>
+                <div>
+                  <span class="badge badge-neutral">Áudio</span>
+                  <h4>Informativo sonoro, episódio 12: o que mudou na coleta</h4>
+                </div>
+              </div>
+            </aside>
+          </div>
+
+          <h3 class="section-title" style="margin-bottom: var(--s-300)"><i class="ph ph-images"></i> Registros fotográficos</h3>
+          <div class="gallery">
+            <figure><div class="ph"><i class="ph ph-image"></i></div><figcaption>Caravana a Brasília, agosto de 2026</figcaption></figure>
+            <figure><div class="ph"><i class="ph ph-image"></i></div><figcaption>Ato na superintendência, julho de 2026</figcaption></figure>
+            <figure><div class="ph"><i class="ph ph-image"></i></div><figcaption>Assembleia geral na sede, maio de 2026</figcaption></figure>
+            <figure><div class="ph"><i class="ph ph-image"></i></div><figcaption>Encontro de formação política, abril de 2026</figcaption></figure>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <div class="container footer-grid">
+      <div>
+        <div class="brand">
+          <img src="logo-mark.png" alt="" />
+          <span class="brand-name">SETIBGE<span>-CE</span></span>
+        </div>
+        <p class="footer-about">
+          Sindicato Estadual dos Trabalhadores em Fundações Públicas Federais
+          de Geografia e Estatística no Estado do Ceará.
+        </p>
+      </div>
+
+      <div>
+        <h4>Links rápidos</h4>
+        <ul class="footer-list">
+          <li><a href="index.html">Home</a></li>
+          <li><a href="associacao.html">A Associação</a></li>
+          <li><a href="saude.html">Saúde</a></li>
+          <li><a href="politica.html">Política &amp; Defesa</a></li>
+          <li><a href="parcerias.html">Parcerias &amp; Serviços</a></li>
+          <li><a href="eventos.html">Eventos &amp; Mural</a></li>
+          <li><a href="noticias.html">Notícias</a></li>
+        </ul>
+      </div>
+
+      <div>
+        <h4>Fale conosco</h4>
+        <ul class="footer-contact">
+          <li><i class="ph ph-phone"></i><a href="tel:+558532641234">(85) 3264-1234</a></li>
+          <li><i class="ph ph-envelope-simple"></i><a href="mailto:contato@setibge-ce.org.br">contato@setibge-ce.org.br</a></li>
+          <li><i class="ph ph-map-pin"></i><span>Av. Pessoa Anta, 274 — Centro<br />Fortaleza/CE — CEP 60060-160</span></li>
+          <li><i class="ph ph-clock"></i><span>Atendimento presencial<br />Segunda a sexta, das 8h às 17h</span></li>
+        </ul>
+      </div>
+
+      <div>
+        <h4>Siga-nos</h4>
+        <div class="social">
+          <a href="https://instagram.com/setibgece" aria-label="Instagram do SETIBGE-CE"><i class="ph ph-instagram-logo"></i></a>
+          <a href="https://facebook.com/setibgece" aria-label="Facebook do SETIBGE-CE"><i class="ph ph-facebook-logo"></i></a>
+          <a href="https://youtube.com/@setibgece" aria-label="YouTube do SETIBGE-CE"><i class="ph ph-youtube-logo"></i></a>
+          <a href="https://x.com/setibgece" aria-label="Perfil do SETIBGE-CE no X"><i class="ph ph-x-logo"></i></a>
+        </div>
+        <h4 style="margin-top: var(--s-300)">Atendimento</h4>
+        <a class="btn btn-wpp btn-sm" href="https://wa.me/5585999120088"><i class="ph ph-whatsapp-logo"></i> Falar no WhatsApp</a>
+      </div>
+    </div>
+
+    <div class="footer-bottom">
+      <div class="container footer-bottom-inner">
+        <span>© 2026 SETIBGE-CE — Associação dos Trabalhadores do IBGE no Ceará. Todos os direitos reservados.</span>
+        <span><a href="privacidade.html">Política de privacidade</a> · <a href="privacidade.html#termos">Termos de uso</a></span>
+      </div>
+    </div>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
