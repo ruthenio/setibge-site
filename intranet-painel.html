@@ -1,0 +1,325 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Painel do associado | Intranet SETIBGE-CE</title>
+  <meta name="description" content="Protótipo do painel da intranet do SETIBGE-CE: e-mail corporativo, mensageiro interno, agenda corporativa, documentos, convênios, RH, financeiro e suporte." />
+  <meta name="robots" content="noindex, nofollow" />
+  <meta property="og:title" content="Painel do associado | Intranet SETIBGE-CE" />
+  <meta property="og:description" content="Protótipo da área restrita do associado do SETIBGE-CE." />
+  <meta property="og:type" content="website" />
+  <meta property="og:locale" content="pt_BR" />
+  <meta property="og:image" content="logo-mark.png" />
+  <meta name="theme-color" content="#0B2545" />
+  <link rel="icon" href="logo-mark.png" type="image/png" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700;800&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@phosphor-icons/web@2.1.1/src/regular/style.css" />
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@phosphor-icons/web@2.1.1/src/fill/style.css" />
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <a class="skip-link" href="#main">Ir para o conteúdo</a>
+
+  <div class="app">
+
+    <aside class="app-side">
+      <a class="brand" href="index.html" aria-label="SETIBGE-CE, página inicial">
+        <img src="logo-mark.png" alt="" />
+        <span class="brand-name">SETIBGE<span>-CE</span></span>
+      </a>
+
+      <nav aria-label="Módulos da intranet">
+        <ul class="app-nav">
+          <li><a href="intranet-painel.html" aria-current="page"><i class="ph-fill ph-house"></i> Início</a></li>
+          <li><a href="#email"><i class="ph ph-envelope-simple"></i> E-mail corporativo <span class="count">5</span></a></li>
+          <li><a href="#mensageiro"><i class="ph ph-chat-circle"></i> Mensageiro interno <span class="count">2</span></a></li>
+          <li><a href="#agenda"><i class="ph ph-calendar-blank"></i> Agenda corporativa</a></li>
+          <li><a href="#documentos"><i class="ph ph-folder-simple"></i> Documentos</a></li>
+          <li><a href="#convenios"><i class="ph ph-handshake"></i> Convênios e benefícios</a></li>
+          <li><a href="#rh"><i class="ph ph-users-three"></i> Recursos humanos</a></li>
+          <li><a href="#financeiro"><i class="ph ph-currency-circle-dollar"></i> Financeiro</a></li>
+          <li><a href="#suporte"><i class="ph ph-headset"></i> Suporte / TI</a></li>
+          <li><a href="#configuracoes"><i class="ph ph-gear-six"></i> Configurações</a></li>
+        </ul>
+      </nav>
+
+      <div class="app-side-foot">
+        <p>Juntos<br />somos mais<br /><span>fortes!</span></p>
+        <i class="ph-fill ph-users-three" aria-hidden="true"></i>
+      </div>
+    </aside>
+
+    <div class="app-main">
+
+      <header class="app-top">
+        <a class="brand" href="index.html" aria-label="SETIBGE-CE, página inicial">
+          <span class="brand-name" style="color:#fff">SETIBGE<span style="color:var(--blue-500)">-CE</span></span>
+        </a>
+        <span class="tag">INTRANET</span>
+
+        <div class="app-top-actions">
+          <button class="app-bell" type="button" aria-label="Notificações: 3 não lidas">
+            <i class="ph ph-bell"></i><span class="count">3</span>
+          </button>
+          <div class="app-user">
+            <span class="avatar" aria-hidden="true">AS</span>
+            <span>
+              <strong>Ana Souza</strong>
+              <span>Associada</span>
+            </span>
+            <i class="ph ph-caret-down" aria-hidden="true"></i>
+          </div>
+        </div>
+      </header>
+
+      <main class="app-body" id="main">
+
+        <div class="alert alert-blue">
+          <h4><i class="ph ph-info"></i> Protótipo de demonstração</h4>
+          <p>
+            Esta tela é uma simulação da área restrita, com dados fictícios, feita para validar
+            o escopo da intranet com a diretoria. Nenhum dado real é exibido e os módulos ainda
+            não estão funcionais. <a href="intranet.html" style="text-decoration:underline">Voltar para a intranet</a>.
+          </p>
+        </div>
+
+        <div class="app-greet">
+          <div>
+            <h1>Olá, Ana Souza!</h1>
+            <p>Bem-vinda à sua intranet. Aqui você encontra tudo o que precisa para o seu dia a dia no SETIBGE-CE.</p>
+          </div>
+          <div class="app-status">
+            <span class="item"><i class="ph ph-calendar-blank"></i> Quinta-feira, 18 de setembro de 2026</span>
+            <span class="divider" aria-hidden="true"></span>
+            <span class="item"><i class="ph-fill ph-sun sun"></i> Fortaleza/CE<br />28&nbsp;°C</span>
+          </div>
+        </div>
+
+        <div class="app-grid">
+
+          <!-- E-mail corporativo -->
+          <section class="app-card" id="email" aria-labelledby="t-email">
+            <div class="app-card-head">
+              <span class="ico"><i class="ph ph-envelope-simple"></i></span>
+              <div>
+                <h2 id="t-email">E-mail corporativo</h2>
+                <p>Seus últimos e-mails</p>
+              </div>
+              <a class="see-more" href="#email">Ver todos <i class="ph ph-caret-right"></i></a>
+            </div>
+            <ul class="app-list">
+              <li><a href="#email">
+                <span class="app-avatar">CT</span>
+                <span class="app-item-body">
+                  <span class="from">Carlos Tavares</span>
+                  <span class="subject">Reunião com a Unimed — 23/09</span>
+                  <span class="excerpt">Prezados, confirmamos a reunião com a Unimed…</span>
+                </span>
+                <span class="app-item-meta"><span class="time">09:42</span><span class="unread"></span></span>
+              </a></li>
+              <li><a href="#email">
+                <span class="app-avatar">RP</span>
+                <span class="app-item-body">
+                  <span class="from">Relações Públicas</span>
+                  <span class="subject">Material para redes sociais</span>
+                  <span class="excerpt">Segue em anexo o calendário de publicações…</span>
+                </span>
+                <span class="app-item-meta"><span class="time">08:17</span><span class="unread"></span></span>
+              </a></li>
+              <li><a href="#email">
+                <span class="app-avatar is-read">AJ</span>
+                <span class="app-item-body">
+                  <span class="from">Assessoria Jurídica</span>
+                  <span class="subject">Informativo jurídico — setembro</span>
+                  <span class="excerpt">Prezados, encaminhamos o boletim jurídico…</span>
+                </span>
+                <span class="app-item-meta"><span class="time">Ontem</span></span>
+              </a></li>
+              <li><a href="#email">
+                <span class="app-avatar">FI</span>
+                <span class="app-item-body">
+                  <span class="from">Financeiro</span>
+                  <span class="subject">Prestação de contas — Festa Junina</span>
+                  <span class="excerpt">Prezados, segue o relatório financeiro do evento…</span>
+                </span>
+                <span class="app-item-meta"><span class="time">Ontem</span><span class="unread"></span></span>
+              </a></li>
+              <li><a href="#email">
+                <span class="app-avatar">SA</span>
+                <span class="app-item-body">
+                  <span class="from">Saúde</span>
+                  <span class="subject">Negociação com a Unimed</span>
+                  <span class="excerpt">Boa tarde! Informamos que a próxima reunião…</span>
+                </span>
+                <span class="app-item-meta"><span class="time">16/09</span><span class="unread"></span></span>
+              </a></li>
+              <li><a href="#email">
+                <span class="app-avatar is-read">EV</span>
+                <span class="app-item-body">
+                  <span class="from">Eventos</span>
+                  <span class="subject">Natal dos Filiados — confirmação</span>
+                  <span class="excerpt">Lembramos que o prazo para confirmação…</span>
+                </span>
+                <span class="app-item-meta"><span class="time">15/09</span></span>
+              </a></li>
+            </ul>
+          </section>
+
+          <!-- Mensageiro interno -->
+          <section class="app-card" id="mensageiro" aria-labelledby="t-msg">
+            <div class="app-card-head">
+              <span class="ico"><i class="ph ph-chat-circle"></i></span>
+              <div>
+                <h2 id="t-msg">Mensageiro interno</h2>
+                <p>Converse com sua equipe</p>
+              </div>
+              <a class="see-more" href="#mensageiro">Ver todos <i class="ph ph-caret-right"></i></a>
+            </div>
+            <div class="app-search">
+              <i class="ph ph-magnifying-glass" aria-hidden="true"></i>
+              <label class="visually-hidden" for="buscaConversas">Buscar conversas</label>
+              <input id="buscaConversas" type="search" placeholder="Buscar conversas..." />
+            </div>
+            <ul class="app-list">
+              <li><a href="#mensageiro">
+                <span class="app-avatar is-group"><i class="ph-fill ph-users-three"></i><span class="online"></span></span>
+                <span class="app-item-body">
+                  <span class="subject">Diretoria</span>
+                  <span class="excerpt">Maria: Bom dia, pessoal! Vamos…</span>
+                </span>
+                <span class="app-item-meta"><span class="time">10:23</span><span class="pill">5</span></span>
+              </a></li>
+              <li><a href="#mensageiro">
+                <span class="app-avatar is-group"><i class="ph-fill ph-users-three"></i><span class="online"></span></span>
+                <span class="app-item-body">
+                  <span class="subject">Equipe RP &amp; Marketing</span>
+                  <span class="excerpt">Thifane: O post de hoje já está…</span>
+                </span>
+                <span class="app-item-meta"><span class="time">09:58</span><span class="pill">3</span></span>
+              </a></li>
+              <li><a href="#mensageiro">
+                <span class="app-avatar is-group"><i class="ph-fill ph-users-three"></i><span class="online"></span></span>
+                <span class="app-item-body">
+                  <span class="subject">Convênios e Benefícios</span>
+                  <span class="excerpt">Alexandre: Material atualizado…</span>
+                </span>
+                <span class="app-item-meta"><span class="time">09:12</span><span class="pill">2</span></span>
+              </a></li>
+              <li><a href="#mensageiro">
+                <span class="app-avatar">JS<span class="online"></span></span>
+                <span class="app-item-body">
+                  <span class="subject">João Santos</span>
+                  <span class="excerpt">Perfeito! Obrigado pela informa…</span>
+                </span>
+                <span class="app-item-meta"><span class="time">08:47</span><i class="ph ph-checks seen" aria-label="Lida"></i></span>
+              </a></li>
+              <li><a href="#mensageiro">
+                <span class="app-avatar">PL</span>
+                <span class="app-item-body">
+                  <span class="subject">Patrícia Lima</span>
+                  <span class="excerpt">Pode deixar! Vou verificar aqui.</span>
+                </span>
+                <span class="app-item-meta"><span class="time">Ontem</span><i class="ph ph-checks seen" aria-label="Lida"></i></span>
+              </a></li>
+              <li><a href="#mensageiro">
+                <span class="app-avatar">CA</span>
+                <span class="app-item-body">
+                  <span class="subject">Carlos Almeida</span>
+                  <span class="excerpt">Tudo certo, obrigado!</span>
+                </span>
+                <span class="app-item-meta"><span class="time">Ontem</span><i class="ph ph-checks seen" aria-label="Lida"></i></span>
+              </a></li>
+              <li><a href="#mensageiro">
+                <span class="app-avatar is-group"><i class="ph-fill ph-users-three"></i></span>
+                <span class="app-item-body">
+                  <span class="subject">Financeiro</span>
+                  <span class="excerpt">Você foi adicionado ao grupo.</span>
+                </span>
+                <span class="app-item-meta"><span class="time">15/09</span></span>
+              </a></li>
+            </ul>
+          </section>
+
+          <!-- Agenda corporativa -->
+          <section class="app-card" id="agenda" aria-labelledby="t-agenda">
+            <div class="app-card-head">
+              <span class="ico"><i class="ph ph-calendar-blank"></i></span>
+              <div>
+                <h2 id="t-agenda">Agenda corporativa</h2>
+                <p>Próximos compromissos</p>
+              </div>
+              <a class="see-more" href="#agenda">Ver todos <i class="ph ph-caret-right"></i></a>
+            </div>
+            <ul class="app-agenda">
+              <li>
+                <span class="app-date"><span class="dow">Qui</span><span class="day">18</span><span class="mon">Set</span></span>
+                <div>
+                  <h4>Reunião de planejamento</h4>
+                  <p class="meta"><i class="ph ph-clock"></i> 10:00 – 12:00</p>
+                  <p class="meta"><i class="ph ph-map-pin"></i> Sala de Reuniões — Sede do SETIBGE-CE</p>
+                  <span class="badge badge-soft">Diretoria</span>
+                </div>
+              </li>
+              <li>
+                <span class="app-date d-green"><span class="dow">Sex</span><span class="day">19</span><span class="mon">Set</span></span>
+                <div>
+                  <h4>Atendimento aos associados</h4>
+                  <p class="meta"><i class="ph ph-clock"></i> 09:00 – 12:00</p>
+                  <p class="meta"><i class="ph ph-map-pin"></i> Sede do SETIBGE-CE</p>
+                  <span class="badge badge-green">Atendimento</span>
+                </div>
+              </li>
+              <li>
+                <span class="app-date d-purple"><span class="dow">Seg</span><span class="day">22</span><span class="mon">Set</span></span>
+                <div>
+                  <h4>Reunião com a Unimed</h4>
+                  <p class="meta"><i class="ph ph-clock"></i> 14:00 – 16:00</p>
+                  <p class="meta"><i class="ph ph-map-pin"></i> Sede da Unimed Fortaleza</p>
+                  <span class="badge badge-soft">Convênios</span>
+                </div>
+              </li>
+              <li>
+                <span class="app-date d-amber"><span class="dow">Qua</span><span class="day">24</span><span class="mon">Set</span></span>
+                <div>
+                  <h4>Encontro de formação política</h4>
+                  <p class="meta"><i class="ph ph-clock"></i> 18:00 – 20:00</p>
+                  <p class="meta"><i class="ph ph-map-pin"></i> Auditório do IBGE</p>
+                  <span class="badge badge-amber">Formação</span>
+                </div>
+              </li>
+              <li>
+                <span class="app-date"><span class="dow">Sex</span><span class="day">26</span><span class="mon">Set</span></span>
+                <div>
+                  <h4>English Class (aulas de inglês)</h4>
+                  <p class="meta"><i class="ph ph-clock"></i> 16:00 – 17:00</p>
+                  <p class="meta"><i class="ph ph-map-pin"></i> Online / transmissão para o interior</p>
+                  <span class="badge badge-soft">Formação</span>
+                </div>
+              </li>
+            </ul>
+          </section>
+
+        </div>
+
+        <section class="app-help" id="suporte">
+          <i class="ph ph-info" aria-hidden="true"></i>
+          <div>
+            <h3>Dúvidas ou problemas de acesso?</h3>
+            <p>
+              Entre em contato com o suporte de TI pelo ramal <strong>1234</strong>
+              ou pelo e-mail <a href="mailto:suporte@setibge-ce.org.br" style="text-decoration:underline">suporte@setibge-ce.org.br</a>
+            </p>
+          </div>
+          <a class="btn btn-primary" href="mailto:suporte@setibge-ce.org.br"><i class="ph ph-headset"></i> Suporte de TI</a>
+        </section>
+
+      </main>
+    </div>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
